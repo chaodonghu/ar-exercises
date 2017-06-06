@@ -10,3 +10,9 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "Please enter a store name"
+print "> "
+new_store_name = gets.chomp
+
+@store8 = Store.create(name: new_store_name)
+pp @store8.errors.messages
