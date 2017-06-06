@@ -15,4 +15,8 @@ print "> "
 new_store_name = gets.chomp
 
 @store8 = Store.create(name: new_store_name)
-pp @store8.errors.messages
+pp @store8.errors.full_messages
+
+messages.each do |error|
+  puts "Error! #{error}"
+end
